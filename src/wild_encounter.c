@@ -4,6 +4,7 @@
 #include "metatile_behavior.h"
 #include "fieldmap.h"
 #include "random.h"
+#include "procrng.h"
 #include "field_player_avatar.h"
 #include "event_data.h"
 #include "safari_zone.h"
@@ -420,6 +421,8 @@ u8 PickWildMonNature(void)
 void CreateWildMon(u16 species, u8 level)
 {
     bool32 checkCuteCharm = TRUE;
+
+    species = ProceduralRandomWildPokemon(species);
 
     ZeroEnemyPartyMons();
 

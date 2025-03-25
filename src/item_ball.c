@@ -1,6 +1,7 @@
 #include "global.h"
 #include "item_ball.h"
 #include "event_data.h"
+#include "procrng.h"
 #include "constants/event_objects.h"
 #include "constants/items.h"
 
@@ -19,7 +20,7 @@ static u32 GetItemBallAmountFromTemplate(u32 itemBallId)
 
 static u32 GetItemBallIdFromTemplate(u32 itemBallId)
 {
-    u32 itemId = gMapHeader.events->objectEvents[itemBallId].trainerRange_berryTreeId;
+    u32 itemId = ProceduralItem(gMapHeader.events->objectEvents[itemBallId].trainerRange_berryTreeId);
 
     return (itemId >= ITEMS_COUNT) ? (ITEM_NONE + 1) : itemId;
 }

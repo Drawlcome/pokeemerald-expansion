@@ -10,6 +10,7 @@
 #include "palette.h"
 #include "pokedex.h"
 #include "pokemon.h"
+#include "procrng.h"
 #include "scanline_effect.h"
 #include "sound.h"
 #include "sprite.h"
@@ -352,7 +353,7 @@ u16 GetStarterPokemon(u16 chosenStarterId)
 {
     if (chosenStarterId > STARTER_MON_COUNT)
         chosenStarterId = 0;
-    return sStarterMon[chosenStarterId];
+    return ProceduralRandomStarter(sStarterMon[chosenStarterId]);
 }
 
 static void VblankCB_StarterChoose(void)
