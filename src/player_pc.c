@@ -234,7 +234,19 @@ static const struct MenuAction sItemStorage_MenuActions[] =
 
 static const u16 sNewGamePCItems[][2] =
 {
+    { ITEM_MEGA_RING, 1 },
+    { ITEM_Z_POWER_RING, 1},
+    { ITEM_DYNAMAX_BAND, 1},
     { ITEM_POTION, 1 },
+    { ITEM_ROTOM_CATALOG, 1},
+    { ITEM_GRACIDEA, 1},
+    { ITEM_REVEAL_GLASS, 1},
+    { ITEM_DNA_SPLICERS, 1},
+    { ITEM_ZYGARDE_CUBE, 1},
+    { ITEM_PRISON_BOTTLE, 1},
+    { ITEM_N_SOLARIZER, 1},
+    { ITEM_N_LUNARIZER, 1},
+    { ITEM_REINS_OF_UNITY, 1},
     { ITEM_NONE, 0 }
 };
 
