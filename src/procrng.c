@@ -9,7 +9,7 @@
 // Generated in main_menu.c randomly, and stored in a var for recall (gets referenced twice)
 // then never referenced again
 u16 ProceduralRandomThisIsAPokemon() {
-    return Random() % NUM_SPECIES;
+    return ProceduralPokemon(Random() % NUM_SPECIES);
 }
 u16 ProceduralRandomStarter(u16 starterSpecies) {
     u32 trainerId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
@@ -32,7 +32,7 @@ u16 ProceduralPokemon(u16 input) {
         + 1 + (SPECIES_SCATTERBUG_POKEBALL - SPECIES_SCATTERBUG_POLAR)
         + 1 + (SPECIES_MIMIKYU_TOTEM_BUSTED - SPECIES_RATICATE_ALOLA_TOTEM);
 
-    input = (914334 * input % 2097143) % (NUM_SPECIES - subtraction);
+    input = ((3858 * input) % 4093) % (NUM_SPECIES - subtraction);
 
     // shift pokemon to skip forms
 
@@ -121,7 +121,7 @@ u16 ProceduralPokemon(u16 input) {
     R -random: SPECIES_SPEWPA_POLAR -> SPECIES_SPEWPA_POKEBALL
     R SPECIES_RATICATE_ALOLA_TOTEM -> SPECIES_MIMIKYU_TOTEM_BUSTED
     */
-    if (input >= NUM_SPECIES) {
+    if (input >= NUM_SPECIES || input <= SPECIES_BULBASAUR) {
         return SPECIES_LUGIA_SHADOW;
     }
     return input;
@@ -130,11 +130,12 @@ u16 ProceduralPokemon(u16 input) {
 u16 ProceduralItem(u16 input) {
     u32 trainerId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId) + input;
     u16 subtraction = ITEM_ABILITY_SHIELD - ITEM_HM01 + 2;  // 1 to go HM01-1, 1 for Item_0_NONE
-    input = ((1406151 * (trainerId + input)) % 2097143) % (NUM_SPECIES - subtraction);
+    input = ((884 * (trainerId + input)) % 8191) % (NUM_SPECIES - subtraction);
+    input++;
     if (input >= ITEM_HM01) {
-        input += subtraction;
+        input += 1 + ITEM_ABILITY_SHIELD - ITEM_HM01;
     }
-    if (input > ITEMS_COUNT) {
+    if (input > ITEMS_COUNT || input < 1) {
         return ITEM_ULTRA_BALL;
     }
     return input;
