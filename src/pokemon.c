@@ -6776,8 +6776,10 @@ bool32 TryFormChange(u32 monId, u32 side, u16 method)
 
 u16 SanitizeSpeciesId(u16 species)
 {
-    if (species > NUM_SPECIES || !IsSpeciesEnabled(species))
-        return SPECIES_NONE;
+    if (species > NUM_SPECIES)
+        return species % NUM_SPECIES;
+    /*else if (!IsSpeciesEnabled(species))
+        return SPECIES_NONE;*/ // why would these not be enabled? lets see :D
     else
         return species;
 }
