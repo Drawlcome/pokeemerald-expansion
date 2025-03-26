@@ -32,8 +32,8 @@ u16 ProceduralPokemon(u16 input) {
         + 1 + (SPECIES_SCATTERBUG_POKEBALL - SPECIES_SCATTERBUG_POLAR)
         + 1 + (SPECIES_MIMIKYU_TOTEM_BUSTED - SPECIES_RATICATE_ALOLA_TOTEM);
 
-    rng_value_t rand = LocalRandomSeed(trainerId + input);
-    int randVal = LocalRandom(rand) % (NUM_SPECIES - subtraction);
+    rng_value_t rand = LocalRandomSeed(input);
+    int randVal = LocalRandom(&rand) % (NUM_SPECIES - subtraction);
     input = randVal;
 
     // shift pokemon to skip forms
@@ -133,7 +133,7 @@ u16 ProceduralItem(u16 input) {
     u32 trainerId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId) + input;
     u16 subtraction = ITEM_ABILITY_SHIELD - ITEM_HM01 + 2;  // 1 to go HM01-1, 1 for Item_0_NONE
     rng_value_t rand = LocalRandomSeed(trainerId + input);
-    int randVal = LocalRandom(rand) % (NUM_SPECIES - subtraction);
+    int randVal = LocalRandom(&rand) % (ITEMS_COUNT - subtraction);
     input = randVal;
     input++;
     if (input >= ITEM_HM01) {
