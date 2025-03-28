@@ -4795,31 +4795,34 @@ Pic: Leader Roxanne
 Gender: Female
 Music: Female
 Items: Potion / Potion
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer
 
-Geodude
+Rolycoly @ Weakness Policy
+Ability: Steam Engine
 Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+IVs: 12 HP / 24 Atk / 12 Def / 12 SpA / 31 SpD / 31 Spe
+Nature: Jolly
+Shiny: Yes
+- MOVE_SMACK_DOWN
+- Rapid Spin
+- Rock Slide
+- Rock Blast
 
-Geodude
+Binacle @ Assault Vest
 Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+IVs: 12 HP / 12 Atk / 24 Def / 0 SpA / 24 SpD / 31 Spe
+- Surf
+- Tickle
+- Withdraw
+- Endure
 
-Nosepass @ Oran Berry
+Nosepass @ Chesto Berry
 Level: 15
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Block
 - Harden
-- Tackle
+- Rest
 - Rock Tomb
 
 === TRAINER_BRAWLY_1 ===
@@ -4832,20 +4835,21 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Machop
+Timburr @ Toxic Orb
+Ability: Guts
 Level: 16
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Karate Chop
 - Low Kick
-- Seismic Toss
+- Fling
 - Bulk Up
 
 Meditite
 Level: 16
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Punch
+IVs: 24 HP / 24 Atk / 24 Def / 31 SpA / 24 SpD / 24 Spe
+- Confusion
 - Light Screen
-- Reflect
+- Ice Punch
 - Bulk Up
 
 Makuhita @ Sitrus Berry
@@ -4866,37 +4870,37 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Voltorb
+Electrode-Hisui
 Level: 20
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Rollout
-- Spark
-- Self Destruct
-- Shock Wave
+- Chloroblast
+- Discharge
+- Volt Switch
+- Reflect
 
-Electrike
+Electivire @ Punching Glove
 Level: 20
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Shock Wave
-- Leer
-- Quick Attack
-- Howl
+IVs: 24 HP / 31 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
+- Brick Break
+- Fire Punch
+- Ice Punch
+- Thunder Punch
 
-Magneton
+Magnezone
 Level: 22
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Supersonic
-- Shock Wave
-- Thunder Wave
-- Sonic Boom
+- Tri Attack
+- Substitute
+- Protect
+- Volt Switch
 
-Manectric @ Sitrus Berry
+Vikavolt @ Sitrus Berry
 Level: 24
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Quick Attack
-- Thunder Wave
-- Shock Wave
-- Howl
+- Bug Buzz
+- Thunderbolt
+- Flash Cannon
+- Agility
 
 === TRAINER_FLANNERY_1 ===
 Name: FLANNERY
@@ -4908,29 +4912,23 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Numel
+SPECIES_TAUROS_PALDEA_BLAZE
+Ability: Intimidate
 Level: 24
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Overheat
-- Take Down
-- Magnitude
-- Sunny Day
 
-Slugma
+Ceruledge
+Shiny: Yes
 Level: 24
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Overheat
-- Smog
-- Light Screen
-- Sunny Day
 
-Camerupt
+SPECIES_DARMANITAN_GALAR @ Choice Band
 Level: 26
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Overheat
-- Tackle
-- Sunny Day
-- Attract
+- Icicle Crash
+- Flare Blitz
+- MOVE_POWER_UP_PUNCH
+- MOVE_U_TURN
 
 Torkoal @ White Herb
 Level: 29
@@ -4950,37 +4948,35 @@ Items: Hyper Potion / Hyper Potion
 Double Battle: No
 AI: Basic Trainer
 
-Spinda
+Blissey @ Lucky Punch
 Level: 27
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Teeter Dance
-- Psybeam
-- Facade
-- Encore
+- Stealth Rock
+- Soft-Boiled
+- Seismic Toss
+- Flamethrower
 
-Vigoroth
+Ditto @ Choice Scarf
 Level: 27
+Ability: Imposter
+Shiny: Yes
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Facade
-- Encore
-- Feint Attack
 
-Linoone
+Maushold-Four @ Wide Lens
 Level: 29
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
-- Slash
-- Belly Drum
-- Facade
-- Headbutt
+- Population Bomb
+- Bullet Seed
+- Low Kick
+- Tidy Up
 
 Slaking @ Sitrus Berry
 Level: 31
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Counter
-- Yawn
+- Double-Edge
+- Play Rough
 - Facade
-- Feint Attack
+- Earthquake
 
 === TRAINER_WINONA_1 ===
 Name: WINONA
@@ -4989,48 +4985,53 @@ Pic: Leader Winona
 Gender: Female
 Music: Female
 Items: Hyper Potion / Hyper Potion
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer / Risky
 
-Swablu
+Pelipper @ Damp Rock
+Level: 29
+Ability: Drizzle
+IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
+- MOVE_U_TURN
+- Roost
+- Tailwind
+- Hurricane
+
+Gyarados
+Ability: Intimidate
+Shiny: Yes
 Level: 29
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Perish Song
-- Mirror Move
-- Safeguard
-- Aerial Ace
+- Thunder
+- Dragon Dance
+- Waterfall
+- Crunch
 
-Tropius
-Level: 29
-IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Sunny Day
-- Aerial Ace
-- Solar Beam
-- Synthesis
-
-Pelipper
+Togekiss
 Level: 30
+Ability: Serene Grace
 IVs: 25 HP / 25 Atk / 25 Def / 25 SpA / 25 SpD / 25 Spe
-- Water Gun
-- Supersonic
-- Protect
-- Aerial Ace
+- Air Slash
+- Ancient Power
+- Flamethrower
+- Psychic
 
 Skarmory
 Level: 31
+Ability: Sturdy
 IVs: 26 HP / 26 Atk / 26 Def / 26 SpA / 26 SpD / 26 Spe
-- Sand Attack
-- Fury Attack
-- Steel Wing
-- Aerial Ace
+- Body Press
+- Iron Defense
+- Roost
+- Spikes
 
-Altaria @ Oran Berry
+Altaria @ Altarianite
 Level: 33
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Earthquake
-- Dragon Breath
 - Dragon Dance
-- Aerial Ace
+- Facade
+- Earthquake
+- Weather Ball
 
 === TRAINER_TATE_AND_LIZA_1 ===
 Name: TATE&LIZA
@@ -5042,37 +5043,42 @@ Items: Hyper Potion / Hyper Potion / Hyper Potion / Hyper Potion
 Double Battle: Yes
 AI: Basic Trainer
 
-Claydol
+SPECIES_INDEEDEE_F @ Terrain Extender
+Level: 41
+Ability: Psychic Surge
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+
+Iron Leaves @ Booster Energy
 Level: 41
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Earthquake
-- Ancient Power
-- Psychic
-- Light Screen
+- Psyblade
+- Trailblaze
+- Megahorn
+- Night Slash
 
-Xatu
-Level: 41
-IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Psychic
-- Sunny Day
-- Confuse Ray
-- Calm Mind
-
-Lunatone @ Sitrus Berry
+Lunatone @ Life Orb
 Level: 42
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
-- Light Screen
 - Psychic
-- Hypnosis
-- Calm Mind
+- Power Gem
+- Earth Power
+- Rock Polish
 
-Solrock @ Sitrus Berry
+Solrock @ Rocky Helmet
 Level: 42
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Sunny Day
 - Solar Beam
-- Psychic
-- Flamethrower
+- Stone Edge
+- Morning Sun
+
+Raichu-Alola @ Air Balloon
+Level: 42
+IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
+- Thunderbolt
+- Psyshock
+- Focus Blast
+- Trailblaze
 
 === TRAINER_JUAN_1 ===
 Name: JUAN
