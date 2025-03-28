@@ -12,11 +12,11 @@ u16 ProceduralRandomThisIsAPokemon() {
     return ProceduralPokemon(Random() % NUM_SPECIES);
 }
 u16 ProceduralRandomStarter(u16 starterSpecies) {
-    u32 trainerId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
+    u16 trainerId = (u16)GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
     return ProceduralPokemon(trainerId + starterSpecies);
 }
 u16 ProceduralRandomWildPokemon(u16 species) {
-    u32 trainerId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
+    u16 trainerId = (u16)GetTrainerId(gSaveBlock2Ptr->playerTrainerId);
     return ProceduralPokemon(trainerId + species + gSaveBlock1Ptr->location.mapGroup * 7 + gSaveBlock1Ptr->location.mapNum * 13);
 }
 u16 ProceduralPokemon(u16 input) {
@@ -123,7 +123,7 @@ u16 ProceduralPokemon(u16 input) {
     R -random: SPECIES_SPEWPA_POLAR -> SPECIES_SPEWPA_POKEBALL
     R SPECIES_RATICATE_ALOLA_TOTEM -> SPECIES_MIMIKYU_TOTEM_BUSTED
     */
-    if (input >= NUM_SPECIES || input <= SPECIES_BULBASAUR) {
+    if (input >= NUM_SPECIES || input < SPECIES_BULBASAUR) {
         return SPECIES_LUGIA_SHADOW;
     }
     return input;
@@ -131,13 +131,13 @@ u16 ProceduralPokemon(u16 input) {
 
 u16 ProceduralItem(u16 input) {
     u32 trainerId = GetTrainerId(gSaveBlock2Ptr->playerTrainerId) + input;
-    u16 subtraction = ITEM_ABILITY_SHIELD - ITEM_HM01 + 2;  // 1 to go HM01-1, 1 for Item_0_NONE
+    u16 subtraction = ITEM_ABILITY_SHIELD - ITEM_TM51 + 2;  // 1 to go HM01-1, 1 for Item_0_NONE
     rng_value_t rand = LocalRandomSeed(trainerId + input);
     int randVal = LocalRandom(&rand) % (ITEMS_COUNT - subtraction);
     input = randVal;
     input++;
-    if (input >= ITEM_HM01) {
-        input += 1 + ITEM_ABILITY_SHIELD - ITEM_HM01;
+    if (input >= ITEM_TM51) {
+        input += 1 + ITEM_ABILITY_SHIELD - ITEM_TM51;
     }
     if (input > ITEMS_COUNT || input < 1) {
         return ITEM_ULTRA_BALL;
