@@ -4795,31 +4795,34 @@ Pic: Leader Roxanne
 Gender: Female
 Music: Female
 Items: Potion / Potion
-Double Battle: No
+Double Battle: Yes
 AI: Basic Trainer
 
-Geodude
+Rolycoly @ Weakness Policy
+Ability: Steam Engine
 Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+IVs: 12 HP / 24 Atk / 12 Def / 12 SpA / 31 SpD / 31 Spe
+Nature: Jolly
+Shiny: Yes
+- MOVE_SMACK_DOWN
+- Rapid Spin
+- Rock Slide
+- Rock Blast
 
-Geodude
+Binacle @ Assault Vest
 Level: 12
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Defense Curl
-- Rock Throw
-- Rock Tomb
+IVs: 12 HP / 12 Atk / 24 Def / 0 SpA / 24 SpD / 31 Spe
+- Surf
+- Tickle
+- Withdraw
+- Endure
 
-Nosepass @ Oran Berry
+Nosepass @ Chesto Berry
 Level: 15
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Block
 - Harden
-- Tackle
+- Rest
 - Rock Tomb
 
 === TRAINER_BRAWLY_1 ===
@@ -4832,20 +4835,21 @@ Items: Super Potion / Super Potion
 Double Battle: No
 AI: Basic Trainer
 
-Machop
+Timburr @ Toxic Orb
+Ability: Guts
 Level: 16
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Karate Chop
 - Low Kick
-- Seismic Toss
+- Fling
 - Bulk Up
 
 Meditite
 Level: 16
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Focus Punch
+IVs: 24 HP / 24 Atk / 24 Def / 31 SpA / 24 SpD / 24 Spe
+- Confusion
 - Light Screen
-- Reflect
+- Ice Punch
 - Bulk Up
 
 Makuhita @ Sitrus Berry
